@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Disect</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="toolbar">
+        <label class="btn btn-primary">
+          Upload SVG
+          <input type="file" id="file-input" accept=".svg,image/svg+xml" hidden />
+        </label>
+        <button type="button" id="reset-all" class="btn" disabled>Reset all</button>
+        <button type="button" id="toggle-layers" class="btn btn-ghost" title="Toggle layer panel">
+          Layers
+        </button>
+      </header>
+
+      <div class="workspace">
+        <aside id="layer-panel" class="layer-panel">
+          <div class="layer-panel-header">Layers</div>
+          <div id="layer-tree" class="layer-tree"></div>
+        </aside>
+
+        <main class="canvas-area">
+          <div id="drop-zone" class="drop-zone">
+            <p>Drop an SVG file here</p>
+            <p class="drop-zone-hint">or use Upload SVG above</p>
+          </div>
+          <div id="canvas" class="canvas" hidden></div>
+          <div id="error-toast" class="error-toast" hidden></div>
+        </main>
+      </div>
+    </div>
+
+    <div id="tooltip" class="tooltip" hidden></div>
+    <div id="context-menu" class="context-menu" hidden>
+      <button type="button" data-action="reset-position">Reset position</button>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
