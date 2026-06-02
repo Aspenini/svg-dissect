@@ -1,11 +1,11 @@
 {
-  "name": "svg-disect",
+  "name": "svg-dissect",
   "version": "0.1.0",
   "type": "module",
   "private": true,
   "scripts": {
     "dev": "bun ./index.html",
-    "build": "bun build ./index.html --outdir=dist --minify",
+    "build": "rm -rf dist && bun build ./index.html --outdir=dist --minify && cp public/CNAME dist/CNAME && touch dist/.nojekyll",
     "preview": "bun ./dist/index.html"
   }
 }

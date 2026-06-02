@@ -1,6 +1,8 @@
-# SVG Disect
+# SVG Dissect
 
 A lightweight web tool for visually inspecting and experimenting with SVG files. Upload an SVG, hover elements to highlight and identify them, drag parts independently, and reset positions per-element or globally.
+
+**Live site:** [svg-dissect.aspenini.com](https://svg-dissect.aspenini.com)
 
 ## Development
 
@@ -18,6 +20,17 @@ bun run preview
 ```
 
 Output is written to `dist/` and can be served by any static host.
+
+## Deployment (GitHub Pages)
+
+Pushes to `main` deploy automatically via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+1. In the GitHub repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+2. Under **Custom domain**, enter `svg-dissect.aspenini.com` (the workflow ships a `CNAME` file in `dist/`).
+3. In DNS, add a **CNAME** record: `svg-dissect` → `<your-user>.github.io` (or the Pages target GitHub shows).
+4. Enable **Enforce HTTPS** once the certificate is issued.
+
+The build copies `public/CNAME` into `dist/` so Pages serves the custom subdomain at the site root.
 
 ## Usage
 

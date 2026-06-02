@@ -6,7 +6,7 @@ import { LayerPanel } from "./ui/layer-panel";
 import { Tooltip } from "./ui/tooltip";
 import { ContextMenu } from "./ui/context-menu";
 
-const PANEL_COLLAPSED_KEY = "svg-disect-panel-collapsed";
+const PANEL_COLLAPSED_KEY = "svg-dissect-panel-collapsed";
 
 export class App {
   private fileInput: HTMLInputElement;

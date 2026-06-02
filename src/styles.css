@@ -338,17 +338,17 @@ body {
   display: block;
 }
 
-.canvas svg [data-disect-id].disect-hover {
+.canvas svg [data-dissect-id].dissect-hover {
   outline: 2px solid var(--highlight);
   outline-offset: 1px;
 }
 
-.canvas svg [data-disect-id].disect-selected {
+.canvas svg [data-dissect-id].dissect-selected {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
 }
 
-.canvas svg [data-disect-id].disect-dragging {
+.canvas svg [data-dissect-id].dissect-dragging {
   cursor: grabbing;
 }
 

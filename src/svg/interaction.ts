@@ -73,22 +73,22 @@ export class InteractionController {
 
   select(id: string | null): void {
     if (this.selectedId) {
-      this.registry.get(this.selectedId)?.element.classList.remove("disect-selected");
+      this.registry.get(this.selectedId)?.element.classList.remove("dissect-selected");
     }
     this.selectedId = id;
     if (id) {
-      this.registry.get(id)?.element.classList.add("disect-selected");
+      this.registry.get(id)?.element.classList.add("dissect-selected");
     }
     this.callbacks.onSelect(id);
   }
 
   hover(id: string | null): void {
     if (this.hoveredId) {
-      this.registry.get(this.hoveredId)?.element.classList.remove("disect-hover");
+      this.registry.get(this.hoveredId)?.element.classList.remove("dissect-hover");
     }
     this.hoveredId = id;
     if (id && id !== this.selectedId) {
-      this.registry.get(id)?.element.classList.add("disect-hover");
+      this.registry.get(id)?.element.classList.add("dissect-hover");
     }
     this.callbacks.onHover(id);
   }
@@ -127,7 +127,7 @@ export class InteractionController {
     const offset = this.transforms.getDragOffset(node.id);
     this.dragInitialDx = offset.dx;
     this.dragInitialDy = offset.dy;
-    node.element.classList.add("disect-dragging");
+    node.element.classList.add("dissect-dragging");
     (e.target as Element).setPointerCapture?.(e.pointerId);
   }
 
@@ -148,7 +148,7 @@ export class InteractionController {
     if (!this.dragging) return;
     this.dragging = false;
     if (this.dragNode) {
-      this.dragNode.element.classList.remove("disect-dragging");
+      this.dragNode.element.classList.remove("dissect-dragging");
       this.dragNode = null;
     }
     try {

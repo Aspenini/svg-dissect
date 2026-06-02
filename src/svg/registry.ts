@@ -96,7 +96,7 @@ function walkElement(el: Element, nodes: RegistryNode[]): RegistryNode | null {
   }
 
   const id = nextId();
-  el.setAttribute("data-disect-id", id);
+  el.setAttribute("data-dissect-id", id);
 
   const node: RegistryNode = {
     id,
@@ -142,11 +142,11 @@ export class ElementRegistry {
 
   findByElement(el: Element | null): RegistryNode | undefined {
     if (!el) return undefined;
-    const id = el.getAttribute("data-disect-id");
+    const id = el.getAttribute("data-dissect-id");
     if (id) return this.byId.get(id);
     let current: Element | null = el;
     while (current) {
-      const cid = current.getAttribute("data-disect-id");
+      const cid = current.getAttribute("data-dissect-id");
       if (cid) return this.byId.get(cid);
       current = current.parentElement;
     }
