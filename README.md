@@ -4,6 +4,17 @@ A lightweight web tool for visually inspecting and experimenting with SVG files.
 
 **Live site:** [svg-dissect.aspenini.com](https://svg-dissect.aspenini.com)
 
+## Usage
+
+1. Click **Upload SVG** or drag a `.svg` file onto the canvas area.
+2. Hover elements on the canvas to see highlights and a tooltip with tag, id, and classes.
+3. Use the **Layers** panel to browse the element tree; click or hover rows to sync with the canvas.
+4. Click and drag any part to move it independently.
+5. Right-click an element and choose **Reset position** to restore that element.
+6. Click **Reset all** to restore the entire layout.
+
+A sample file is included at `public/sample.svg` for testing.
+
 ## Development
 
 ```bash
@@ -31,14 +42,3 @@ Pushes to `main` deploy automatically via [`.github/workflows/deploy.yml`](.gith
 4. Enable **Enforce HTTPS** once the certificate is issued.
 
 The build copies `public/CNAME` into `dist/` so Pages serves the custom subdomain at the site root.
-
-## Usage
-
-1. Click **Upload SVG** or drag a `.svg` file onto the canvas area.
-2. Hover elements on the canvas to see highlights and a tooltip with tag, id, and classes.
-3. Use the **Layers** panel to browse the element tree; click or hover rows to sync with the canvas.
-4. Click and drag any part to move it independently.
-5. Right-click an element and choose **Reset position** to restore that element.
-6. Click **Reset all** to restore the entire layout.
-
-A sample file is included at `public/sample.svg` for testing.
